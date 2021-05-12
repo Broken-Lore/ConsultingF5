@@ -4,6 +4,7 @@ require("./views/appointmentList.php");
 require("./views/components/layout.php");
 
 use App\DbSession;
+
 use App\models\Appointment;
 require("./DbSession.php");
 
