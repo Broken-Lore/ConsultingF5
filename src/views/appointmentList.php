@@ -1,6 +1,6 @@
 <div class="container">
     <h1 class="d-flex justify-content-center p-3">Booked appointments: </h1>
-    <table class="table table-hover border border-dark ">
+    <table class="table table-hover border border-dark table-responsive-lg">
         <thead style="background-color:aqua">
             <tr>
             <th scope="col">ID</th>
@@ -60,8 +60,12 @@
             </tr>
         </tbody>
     </table>
-    <div class="m-0 p-0 container btn-group-vertical position-absolute bottom-0 start-0 " role="group" aria-label="Basic mixed styles example">
-        <button type="button" class="p-2 flex-grow-1 btn bg-success">NEW APPOINTMENT</button>
+    <div class="m-0 p-0 container-fluid btn-group-vertical position-absolute bottom-0 start-0 " role="group" aria-label="Basic mixed styles example">
+        <a href="./views/createAppointment.php" class='p-2 flex-grow-1 btn bg-success'>
+            <button type='button' class='p-2 flex-grow-1 btn bg-success'>NEW APPOINTMENT</button>
+        </a>
+        <a href="./views/editAppointments.php" class="p-2 flex-grow-1 btn bg-warning">
         <button type="button" class="p-2 flex-grow-1 btn bg-warning">EDIT APPOINTMENT</button>
+        </a>
     </div>
 </div>
