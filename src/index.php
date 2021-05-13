@@ -1,16 +1,14 @@
 <?php
 namespace App;
-require("./views/components/head.php");
-require("./views/appointmentList.php");
-require("./views/components/layout.php");
 
-use App\DbSession;
+use App\controllers\AppointmentController;
 
-use App\models\Appointment;
+require ("./controllers/AppointmentController.php");
 
-require("./DbSession.php");
 
-$conexcion= new DbSession;
+$controller = new AppointmentController();
+
+
   
 
 

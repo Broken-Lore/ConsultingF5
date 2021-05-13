@@ -5,7 +5,7 @@
  require ("../DbSession.php");
 
 
-class appointment {
+class Appointment {
     private ?int $id;
     private ?string $name;
     private ?string $topic;
@@ -61,7 +61,8 @@ class appointment {
     }
     public function Delete(){
     }
-            
+
+
 
 
 
