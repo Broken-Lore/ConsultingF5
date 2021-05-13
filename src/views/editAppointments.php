@@ -1,5 +1,6 @@
+<?php require("./components/head.php");?>
 <div class="container">
-    <button type="button" class="position-absolute btn" style="margin-top: 12px"><--</button>
+    <a class="position-absolute" href="../index.php"><button type="button" class="btn" style="margin-top: 12px"><--</button></a>
     <h1 class="d-flex justify-content-center p-3">EDIT APPOINTMENT</h1>
     <ul class="list-group lh-lg">
         <li class="list-group-item" style="border:none">
@@ -23,3 +24,4 @@
         <button type="button" class="p-2 flex-grow-1 btn bg-success">UPDATE APPOINTMENT</button>
     </div>
 </div>
+<?php require("./components/layout.php");?>

@@ -51,13 +51,13 @@ class appointment {
     public static function all(){
         $database = new DbSession();
         $query = $database->mysql->query("SELECT *  FROM `appointment`");
-        $appoimnetsArray = $query->fetchAll();
-        $appoimnetslist = [];
-        foreach ($tickectsArray as $appointment) {
-            $appointmentItem = new self($appointment["name"], $appointment["topic"], $appointment["date"], $appointment["id"]);
-            array_push($appoimnetslist, $appointmentItem);
+        $appointmentsArray = $query->fetchAll();
+        $appointmentslist = [];
+        foreach ($appointmentsArray as $appointment) {
+            $appointmentsItem = new self($appointment["name"], $appointment["topic"], $appointment["date"], $appointment["id"]);
+            array_push($appointmentslist, $appointmentsItem);
         }
-        return $appoimnetslist;
+        return $appointmentslist;
     }
     public function Delete(){
     }
