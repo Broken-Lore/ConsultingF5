@@ -48,11 +48,21 @@ class appointment {
     {
         $this->database->mysql->query("INSERT INTO `{$this->table}` (`Name`, `Topic`) VALUES ('{$name}', '{$topic}');"); 
     }
+    public static function all(){
+        $database = new DbSession();
+        $query = $database->mysql->query("SELECT *  FROM `appointment`");
+        $appoimnetsArray = $query->fetchAll();
+        $appoimnetslist = [];
+        foreach ($tickectsArray as $appointment) {
+            $appointmentItem = new self($appointment["name"], $appointment["topic"], $appointment["date"], $appointment["id"]);
+            array_push($appoimnetslist, $appointmentItem);
+        }
+        return $appoimnetslist;
+    }
+    public function Delete(){
+    }
+            
 
 
 
 }
-
-
-
-?>
