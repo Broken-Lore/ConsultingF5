@@ -3,7 +3,6 @@
 namespace App\controllers;
 
 use App\core\View;
-use App\DbSession;
 use App\models\Appointment;
 
 
@@ -25,7 +24,7 @@ class AppointmentController {
     public function index():void {
       
         $appointment= new Appointment();
-        $appointments= $appointment -> all();
+        $appointments= $appointment->all();
 
         new View("appointmentList",
        ["appointments"=>$appointments,]);

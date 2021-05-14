@@ -1,3 +1,5 @@
+<?php require_once("./components/head.php");?>
+
 <div class="container">
     <h1 class="d-flex justify-content-center p-3">Booked appointments: </h1>
     <table class="table table-hover border border-dark table-responsive-lg">
@@ -58,6 +60,21 @@
             <td>@mdo</td>
             <td>x</td>
             </tr>
+
+            <?php
+                // foreach ($data["appointments"] as $appointment) {
+                //     echo "
+                //     <tr>
+                //         <td>{$student->getId()}</td>
+                //         <td>{$student->getName()}</td>
+                //         <td>{$student->getCreatedAt()}</td>
+                //         <td>               
+                //         <a href='?action=edit&id={$student->getId()}'><i class='lnr lnr-pencil'></i></a>
+                //             <a href='?action=delete&id={$student->getId()}'><i class='lnr lnr-trash'></i></a>
+                //         </td>
+                //     </tr>
+                //     ";
+                //} ?>
         </tbody>
     </table>
     <div class="m-0 p-0 container-fluid btn-group-vertical position-absolute bottom-0 start-0 " role="group" aria-label="Basic mixed styles example">
@@ -69,3 +86,4 @@
         </a>
     </div>
 </div>
+<?php require_once("./components/layout.php");?>

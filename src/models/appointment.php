@@ -2,7 +2,7 @@
  
  namespace App\models;
  use App\DbSession;
- require ("../DbSession.php");
+ 
 
 
 class Appointment {
@@ -26,7 +26,7 @@ class Appointment {
         }
     }
 
-    public function getCoderName(){
+    public function getName(){
         return $this->name;
     }
     public function getId(){

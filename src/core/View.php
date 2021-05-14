@@ -6,6 +6,9 @@ class View {
 
         public function __construct( string  $view, array $data=null)
         {
-           require_once ("src/views/$view.php");
+           require_once("../views/$view.php");
         }
 }
+
+
+//src/views/$view.php

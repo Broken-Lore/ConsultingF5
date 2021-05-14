@@ -1,15 +1,14 @@
 <?php
 namespace App;
-
+require("../vendor/autoload.php");
 use App\controllers\AppointmentController;
 
-require ("./controllers/AppointmentController.php");
+
 
 
 $controller = new AppointmentController();
 
 
-  
 
 
-?>
+

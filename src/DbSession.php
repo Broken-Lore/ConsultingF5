@@ -25,7 +25,7 @@ class DbSession{
         $password = "";
         $dtbase = "consulting";
         $options = [PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC];
-        $pdo = new PDO("mysql:host=$host; dbname=$dtbase", $user, $password, $options);
+        $pdo = new PDO("mysql:host={$host}; dbname={$dtbase}", $user, $password, $options);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         return $pdo;
