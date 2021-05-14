@@ -13,7 +13,6 @@ class DbSession{
     { 
         try {
             $this->mysql = $this->getConnection();
-            echo "conection succesful";
         } catch (PDOException $e) {
             echo $e->getMessage();
         }

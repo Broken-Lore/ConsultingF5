@@ -8,38 +8,48 @@ use App\Models\Appointment;
 
 
 
-class AppointmentController {
-
+class AppointmentController
+{
     public function __construct()
     {
-        if (isset ($_GET["action"]) && ($_GET["action"] =="create")) 
-        {
-        $this->create();
+        if (isset($_GET["action"]) && ($_GET["action"] =="create")) {
+            $this->create();
+            return;
         }
-        
-       $this->index();
+        if (isset($_GET["action"]) && ($_GET["action"] =="store")) {
+            $this->store($_POST);
+            return;
+        }
+        if (isset($_GET["action"]) && ($_GET["action"] =="edit")) {
+            $this->edit($_GET["id"]);
+            return;
+        }
+        if (isset($_GET["action"]) && ($_GET["action"] =="update")) {
+            $this->update($_POST, $_GET["id"]);
+            return;
+        }
+        if (isset($_GET["action"]) && ($_GET["action"] =="delete")) {
+            $this->update($_GET["id"]);
+            return;
+        }
+        $this->index();
     }
 
 
-    public function index():void {
-         $appointment= new Appointment();
-         $appointments= $appointment->all();
+    public function index():void
+    {
+        $appointment= new Appointment();
+        $appointments= $appointment->all();
 
-         new View("appointmentList",
-         ["appointments"=>$appointments,]);
-   }
+        new View(
+            "appointmentList",
+            ["appointments"=>$appointments,]
+        );
+    }
 
 
-public function create ():void
-{
-    echo "hola";
+    public function create():void
+    {
+        new View("createAppointment");
+    }
 }
-
-
-}
-
-
-
-
-
-

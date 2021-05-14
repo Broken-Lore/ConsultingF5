@@ -13,68 +13,22 @@
             </tr>
         </thead>
         <tbody class="modal-dialog-scrollable" >
-            <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>x</td>
-            </tr>
-            <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-            <td>x</td>
-            </tr>
-            <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-            <td>x</td>
-            </tr>
-            <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>x</td>
-            </tr>
-            <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-            <td>x</td>
-            </tr>
-            <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-            <td>x</td>
-            </tr>
-            <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>x</td>
-            </tr>
-
             <?php
-                // foreach ($data["appointments"] as $appointment) {
-                //     echo "
-                //     <tr>
-                //         <td>{$student->getId()}</td>
-                //         <td>{$student->getName()}</td>
-                //         <td>{$student->getCreatedAt()}</td>
-                //         <td>               
-                //         <a href='?action=edit&id={$student->getId()}'><i class='lnr lnr-pencil'></i></a>
-                //             <a href='?action=delete&id={$student->getId()}'><i class='lnr lnr-trash'></i></a>
-                //         </td>
-                //     </tr>
-                //     ";
-                //} ?>
+                foreach ($data["appointments"] as $appointment){
+                   echo "<tr>
+                        <td> {$appointment->getId()}</td>
+                        <td> {$appointment->getName()}</td>
+                        <td> {$appointment->getTopic()}</td>
+                        <td> {$appointment->getDate()}</td>
+              
+                   </tr>";
+                    
+                }
+                    
+            ?>
+
+
+
         </tbody>
     </table>
     <div class="m-0 p-0 container-fluid btn-group-vertical position-absolute bottom-0 start-0 " role="group" aria-label="Basic mixed styles example">
