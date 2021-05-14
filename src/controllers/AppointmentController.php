@@ -2,8 +2,8 @@
 
 namespace App\controllers;
 
-use App\core\View;
-use App\models\Appointment;
+use App\Core\View;
+use App\Models\Appointment;
 
 
 
@@ -22,15 +22,11 @@ class AppointmentController {
 
 
     public function index():void {
-      
-        $appointment= new Appointment();
-        $appointments= $appointment->all();
+         $appointment= new Appointment();
+         $appointments= $appointment->all();
 
-        new View("appointmentList",
-       ["appointments"=>$appointments,]);
-
-
-
+         new View("appointmentList",
+         ["appointments"=>$appointments,]);
    }
 
 

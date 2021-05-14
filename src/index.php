@@ -1,7 +1,6 @@
 <?php
 namespace App;
-require("../vendor/autoload.php");
-use App\controllers\AppointmentController;
+use App\Controllers\AppointmentController;
 
 
 

@@ -1,14 +1,13 @@
 <?php
 
-namespace App\core;
+namespace App\Core;
 
 class View {
 
         public function __construct( string  $view, array $data=null)
         {
-           require_once("../views/$view.php");
+           require_once("src/Views/$view.php");
         }
 }
 
 
-//src/views/$view.php

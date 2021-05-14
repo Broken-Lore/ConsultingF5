@@ -1,4 +1,4 @@
-<?php require_once("./components/head.php");?>
+<?php require_once("components/head.php");?>
 
 <div class="container">
     <h1 class="d-flex justify-content-center p-3">Booked appointments: </h1>
@@ -86,4 +86,4 @@
         </a>
     </div>
 </div>
-<?php require_once("./components/layout.php");?>
+<?php require_once("components/layout.php");?>
