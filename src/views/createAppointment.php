@@ -1,4 +1,5 @@
-<?php require("./components/head.php");?>
+<?php require_once("components/head.php");?>
+
 <div class="container">
     <a class="position-absolute" href="../index.php"><button type="button" class="btn" style="margin-top: 12px"><--</button></a>
     <h1 class="d-flex justify-content-center p-3">NEW APPOINTMENT</h1>
@@ -24,4 +25,5 @@
         <button type="button" class="p-2 flex-grow-1 btn bg-success">CREATE APPOINTMENT</button>
     </div>
 </div>
-<?php require("./components/layout.php");?>
+
+<?php require_once("components/layout.php");?>

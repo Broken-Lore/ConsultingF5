@@ -15,24 +15,20 @@
         <tbody class="modal-dialog-scrollable" >
             <?php
                 foreach ($data["appointments"] as $appointment){
-                   echo "<tr>
+                   echo "
+                   <tr>
                         <td> {$appointment->getId()}</td>
                         <td> {$appointment->getName()}</td>
                         <td> {$appointment->getTopic()}</td>
                         <td> {$appointment->getDate()}</td>
-              
-                   </tr>";
-                    
-                }
-                    
+                        <td>x</td>
+                   </tr>";  
+                }       
             ?>
-
-
-
         </tbody>
     </table>
     <div class="m-0 p-0 container-fluid btn-group-vertical position-absolute bottom-0 start-0 " role="group" aria-label="Basic mixed styles example">
-        <a href="./views/createAppointment.php" class='p-2 flex-grow-1 btn bg-success'>
+        <a href="?action=create" class='p-2 flex-grow-1 btn bg-success'>
             <button type='button' class='p-2 flex-grow-1 btn bg-success'>NEW APPOINTMENT</button>
         </a>
         <a href="./views/editAppointments.php" class="p-2 flex-grow-1 btn bg-warning">
@@ -40,4 +36,5 @@
         </a>
     </div>
 </div>
+
 <?php require_once("components/layout.php");?>
