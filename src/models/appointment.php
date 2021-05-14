@@ -46,7 +46,7 @@ class Appointment {
     }
     public function save($name, $topic): void
     {
-        $this->database->mysql->query("INSERT INTO `{$this->table}` (`Name`, `Topic`) VALUES ('{$name}', '{$topic}');"); 
+        $this->database->mysql->query("INSERT INTO `{$this->table}` (`Name`, `Topic`) VALUES ('{$name}','{$topic}');"); 
     }
     public static function all(){
         $database = new DbSession();

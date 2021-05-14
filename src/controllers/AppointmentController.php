@@ -16,8 +16,8 @@ class AppointmentController
             $this->create();
             return;
         }
-        if (isset($_GET["action"]) && ($_GET["action"] =="store")) {
-            $this->store($_POST);
+        if (isset($_GET["action"]) && ($_GET["action"] =="save")) {
+            $this->save($_POST);
             return;
         }
         if (isset($_GET["action"]) && ($_GET["action"] =="edit")) {
