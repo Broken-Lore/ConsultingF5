@@ -1,7 +1,9 @@
 <?php
  
  namespace App\Models;
- use App\DbSession;
+
+use App\Core\View;
+use App\DbSession;
  
 
 
@@ -25,6 +27,7 @@ class Appointment {
             $this->database = new DbSession();
         }
     }
+  
 
     public function getName(){
         return $this->name;
@@ -62,7 +65,12 @@ class Appointment {
     public function Delete(){
     }
 
+    public function findById($id){
+        $query = $this->database->mysql->query("SELECT * FROM `appointment` WHERE `id` = {$id}");
+        $result = $query->fetchAll();
 
+        return new Appointment($result[0]["name"], $result[0]["topic"], $result[0]["date"],$result[0]["id"]);
+    }
 
 
 

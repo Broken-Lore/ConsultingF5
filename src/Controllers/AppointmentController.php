@@ -19,7 +19,7 @@ class AppointmentController
             
         }
         if (isset($_GET["action"]) && ($_GET["action"] == "edit")) {
-            $this->edit($_GET["id"]);
+                $this->edit($_GET["id"]);
             return;
         }
         if (isset($_GET["action"]) && ($_GET["action"] == "update")) {
@@ -55,4 +55,15 @@ class AppointmentController
         $newAppointment->save($request["name"], $request["topic"]);
         $this->index();
     }
+    public function edit($id):void 
+    {
+        $newAppointment = new Appointment();
+        $appointment =  $newAppointment->findById($id);
+
+        new View(
+            "editAppointments", 
+            ["appointments" => $appointment,]
+        );
+    }
+    
 }
