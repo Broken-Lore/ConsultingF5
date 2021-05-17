@@ -20,7 +20,7 @@
         </li>
         <li class="list-group-item" style="border:none">
             <label>Date</label><br>
-            <input class="m-0 p-0 container border border-3 border-dark" disabled="disabled">
+            <input class="m-0 p-0 container border border-3 border-dark no-wrap" disabled="disabled">
         </li>
     </ul>
     
