@@ -16,6 +16,7 @@ class AppointmentController
         if (isset($_GET["action"]) && ($_GET["action"] == "store")) {
             $this->store($_POST);
             return;
+            
         }
         if (isset($_GET["action"]) && ($_GET["action"] == "edit")) {
             $this->edit($_GET["id"]);
@@ -48,9 +49,11 @@ class AppointmentController
         new View("createAppointment");
     }
     
-    public function store($name, $topic): void 
+    public function store(array $request): void 
     {
-        $newAppointment = new Appointment(); 
+     
+          
+        $newAppointment = new Appointment($request['name']); 
         $newAppointment->save();
         $this->index();
     }
