@@ -50,11 +50,9 @@ class AppointmentController
     }
     
     public function store(array $request): void 
-    {
-     
-          
-        $newAppointment = new Appointment($request['name']); 
-        $newAppointment->save();
+    {   
+        $newAppointment = new Appointment(); 
+        $newAppointment->save($request["name"], $request["topic"]);
         $this->index();
     }
 }
