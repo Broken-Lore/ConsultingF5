@@ -10,7 +10,7 @@ class Appointment {
     private ?string $name;
     private ?string $topic;
     private ?string $date;
-    private $database;
+    public $database;
     private $table ='appointment';
 
     public function __construct (string $name = null, string $topic = null, $date = null, int $id = null)
@@ -44,7 +44,7 @@ class Appointment {
     public function changeTopic($topic){
         $this->topic = $topic;
     }
-    public function save($name, $topic): void
+    public function save($name, $topic, $id, $date): void
     {
         $this->database->mysql->query("INSERT INTO `{$this->table}` (`Name`, `Topic`) VALUES ('{$name}','{$topic}');"); 
     }
