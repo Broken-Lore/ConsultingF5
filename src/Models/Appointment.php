@@ -63,6 +63,7 @@ class Appointment {
         return $appointmentslist;
     }
     public function Delete(){
+        $this->database->mysql->query("DELETE FROM `appointment` WHERE `appointment`.`id` = {$this->id}");
     }
 
     public function findById($id){
@@ -72,6 +73,9 @@ class Appointment {
         return new Appointment($result[0]["name"], $result[0]["topic"], $result[0]["date"],$result[0]["id"]);
     }
 
-
+    public function Update()
+    {
+        $this->database->mysql->query("UPDATE `appointment`SET `name` =  '{$this->name}', `topic` =  '{$this->topic}' WHERE `id` = {$this->id}"); 
+    }
 
 }

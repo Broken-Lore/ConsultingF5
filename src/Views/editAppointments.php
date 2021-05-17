@@ -2,7 +2,7 @@
 <div class="container">
     <a class="position-absolute" href="index.php"><button type="button" class="btn" style="margin-top: 12px"><--</button></a>
     <h1 class="d-flex justify-content-center p-3">EDIT APPOINTMENT</h1>
-    <form action='?action=edit&id=<?php echo $data["appointments"]->getId() ?>' method="post">
+    <form action='?action=update&id=<?php echo $data["appointments"]->getId() ?>' method="post">
     <ul class="list-group lh-lg">
         <li class="list-group-item" style="border:none">
             <label>ID</label><br>
@@ -24,7 +24,7 @@
     </ul>
     
     <div class="m-0 p-0 container btn-group-vertical position-absolute bottom-0 start-0 " role="group" aria-label="Basic mixed styles example">
-        <button type="submit" class="p-2 flex-grow-1 btn bg-success">UPDATE APPOINTMENT</button>
+        <button  type="submit" class="p-2 flex-grow-1 btn bg-success">UPDATE APPOINTMENT</button>
     </div>
     </form>
 </div>

@@ -23,7 +23,7 @@
                         <td> {$appointment->getName()}</td>
                         <td> {$appointment->getTopic()}</td>
                         <td> {$appointment->getDate()}</td>
-                        <td>x </td>
+                        <td><a href='?action=delete&id={$appointment->getId()}'>X</a></td>
                         <td><a href='?action=edit&id={$appointment->getId()}'>EDIT</a></td>
                     </tr>";  
                 } 

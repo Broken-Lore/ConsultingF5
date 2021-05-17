@@ -65,5 +65,22 @@ class AppointmentController
             ["appointments" => $appointment,]
         );
     }
-    
+    public function update(array $request, $id)
+    {
+        $newAppointment = new Appointment();
+        $appointment = $newAppointment->findById($id);
+        $appointment->renameName($request["name"]);
+        $appointment->changeTopic($request["topic"]);
+        $appointment->Update();
+
+        $this->index();
+    }
+    public function delete($id)
+    {
+        $newAppointment = new Appointment();
+        $appointment = $newAppointment->findById($id);
+        $appointment->Delete();
+
+        $this->index();
+    }
 }
