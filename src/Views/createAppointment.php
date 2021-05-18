@@ -1,7 +1,8 @@
 <?php require_once("components/head.php");?>
 
 <div class="container">
-    <a class="position-absolute" href="index.php"><button type="button" class="btn" style="margin-top: 12px"><--</button></a>
+
+    <a class="position-absolute" href="index.php"><button type="button" class="btn" style="margin-top: 12px"></button></a>
     <h1 class="d-flex justify-content-center p-3">NEW APPOINTMENT</h1>
     <form action="?action=store" method="post">
     <ul class="list-group lh-lg">
