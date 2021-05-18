@@ -66,8 +66,9 @@ class Appointment {
         $this->database->mysql->query("DELETE FROM `appointment` WHERE `appointment`.`id` = {$this->id}");
     }
 
-    public function findById($id){
-        $query = $this->database->mysql->query("SELECT * FROM `appointment` WHERE `id` = {$id}");
+    public static function findById($id){
+        $database = new DbSession();
+        $query = $database->mysql->query("SELECT * FROM `appointment` WHERE `id` = {$id}");
         $result = $query->fetchAll();
 
         return new Appointment($result[0]["name"], $result[0]["topic"], $result[0]["date"],$result[0]["id"]);
