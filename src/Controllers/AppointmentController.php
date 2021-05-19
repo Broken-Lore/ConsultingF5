@@ -2,8 +2,12 @@
 
 namespace App\Controllers;
 
+use App\Logger\Log;
 use App\Core\View;
 use App\Models\Appointment;
+
+
+
 
 class AppointmentController
 {
@@ -53,25 +57,29 @@ class AppointmentController
     {   
         $newAppointment = new Appointment(); 
         $newAppointment->save($request["name"], $request["topic"]);
+        $lastAppointment = Appointment::lastAppointment();
+        $log = new Log("Create", "Created a new ticket",  $lastAppointment->getId());
+        $log->LogInFile();
+
         $this->index();
     }
     public function edit($id):void 
     {
-        $newAppointment = new Appointment();
-        $appointment =  $newAppointment->findById($id);
-
+        $appointmentToEdit = Appointment::findById($id);
+    
         new View(
             "editAppointments", 
-            ["appointments" => $appointment,]
+            ["appointments" => $appointmentToEdit,]
         );
     }
     public function update(array $request, $id)
     {
-        $newAppointment = new Appointment();
-        $appointment = $newAppointment->findById($id);
-        $appointment->renameName($request["name"]);
-        $appointment->changeTopic($request["topic"]);
-        $appointment->Update();
+        $appointmentToUpdate = Appointment::findById($id);
+        $appointmentToUpdate->renameName($request["name"]);
+        $appointmentToUpdate->changeTopic($request["topic"]);
+        $appointmentToUpdate->Update();
+        $log = new Log("Update", "Ticket updated", $id);
+        $log->LogInFile();
 
         $this->index();
     }
@@ -80,6 +88,8 @@ class AppointmentController
         $newAppointment = new Appointment();
         $appointment = $newAppointment->findById($id);
         $appointment->Delete();
+        $log = new Log("Delete", "Delete a ticket", $id);
+        $log->LogInFile();
 
         $this->index();
     }
