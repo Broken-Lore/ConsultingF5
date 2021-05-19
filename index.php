@@ -1,6 +1,7 @@
 <?php
 
-//require("vendor/autoload.php");
-//require("src/index.php");
 
-    echo "hola";
+require("vendor/autoload.php");
+require("src/index.php");
+
+?>

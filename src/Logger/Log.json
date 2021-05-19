@@ -1,0 +1,42 @@
+{
+    "time": "2021-05-19 11:22:48",
+    "action": "Delete",
+    "message": "Delete a ticket",
+    "id": 22
+}
+{
+    "time": "2021-05-19 11:22:56",
+    "action": "Create",
+    "message": "Created a new ticket",
+    "id": 23
+}
+{
+    "time": "2021-05-19 11:23:09",
+    "action": "Create",
+    "message": "Created a new ticket",
+    "id": 24
+}
+{
+    "time": "2021-05-19 11:23:27",
+    "action": "Create",
+    "message": "Created a new ticket",
+    "id": 25
+}
+{
+    "time": "2021-05-19 11:23:46",
+    "action": "Create",
+    "message": "Created a new ticket",
+    "id": 26
+}
+{
+    "time": "2021-05-19 11:23:49",
+    "action": "Delete",
+    "message": "Delete a ticket",
+    "id": 21
+}
+{
+    "time": "2021-05-19 11:23:50",
+    "action": "Delete",
+    "message": "Delete a ticket",
+    "id": 23
+}

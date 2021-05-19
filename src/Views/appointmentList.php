@@ -23,8 +23,8 @@
                         <td> {$appointment->getName()}</td>
                         <td> {$appointment->getTopic()}</td>
                         <td style='width: 6.5rem'> {$appointment->getDate()}</td>
-                        <td><a href='?action=delete&id={$appointment->getId()}'>DELETE</a></td>
-                        <td><a href='?action=edit&id={$appointment->getId()}'>EDIT</a></td>
+                        <td><a href='?action=delete&id={$appointment->getId()}'>🗑</td>
+                        <td><a href='?action=edit&id={$appointment->getId()}'>🖉</a></td>
                     </tr>";  
                 } 
             ?>
