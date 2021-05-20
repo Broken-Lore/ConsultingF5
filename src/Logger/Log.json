@@ -40,3 +40,21 @@
     "message": "Delete a ticket",
     "id": 23
 }
+{
+    "time": "2021-05-20 11:09:28",
+    "action": "Delete",
+    "message": "Delete a ticket",
+    "id": 16
+}
+{
+    "time": "2021-05-20 11:09:46",
+    "action": "Delete",
+    "message": "Delete a ticket",
+    "id": 15
+}
+{
+    "time": "2021-05-20 11:10:01",
+    "action": "Create",
+    "message": "Created a new ticket",
+    "id": 19
+}

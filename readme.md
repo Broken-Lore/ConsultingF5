@@ -14,20 +14,20 @@ Nuestra aplicación te permite:
 
 _Para poder correr los test se necesita vendor:_
 
-'''
+```
 composer init
-'''
-'''
+```
+```
 composer update
-'''
-
+```
+## Hola
 ## Ejecutando las pruebas ⚙️
 
 _Para poder ejecutar los test hay que correr el comando:_
 
-'''
+```
 vendor/bin/phpunit
-'''
+```
 
 ### Modelo de código ⌨️
 
