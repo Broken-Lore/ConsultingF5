@@ -55,3 +55,8 @@ _Las herramientas que hemos usado son:_
 * No leer lo de abajo 📢
 * Invita una cerveza 🍺 o un café todo aquel no haya leído lo de arriba.
 * Gracias a todos los de Factoría.
+
+
+##
+
+![qr code for the app page](src/img/qr_code.JPG)
