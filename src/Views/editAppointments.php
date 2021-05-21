@@ -2,18 +2,16 @@
 <div class="container">
     <a class="position-absolute" href="index.php">
         <button type="button" class="btn" style="margin-top: 12px">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z" />
-            </svg>
+            🡨
         </button>
     </a>
 
-    <h1 class="d-flex justify-content-center p-3">EDIT APPOINTMENT</h1>
-    <form action='?action=update&id=<?php echo $data["appointments"]->getId() ?>' method="post">
-        <ul class="list-group lh-lg">
+    <h1 class="d-flex justify-content-center p-3">🛠 Update question 🎆</h1>
+    <form class="form" action='?action=update&id=<?php echo $data["appointments"]->getId() ?>' method="post">
+        <ul class="edit list-group lh-lg">
             <li class="list-group-item" style="border:none">
                 <label>ID</label><br>
-                <input value='<?php echo $data["appointments"]->getId() ?>' class="m-0 p-0 container border border-2 border-dark" disabled="disabled">
+                <input value='<?php echo $data["appointments"]->getId() ?>' class="gray m-0 p-0 container border border-2 border-dark" disabled="disabled">
             </li>
             <li class="list-group-item" style="border:none">
                 <label>Name</label><br>
@@ -25,12 +23,15 @@
             </li>
             <li class="list-group-item" style="border:none">
                 <label>Date</label><br>
-                <input value='<?php echo $data["appointments"]->getDate() ?>' class="m-0 p-0 container border border-2 border-dark" disabled="disabled">
+                <input value='<?php echo $data["appointments"]->getDate() ?>' class="gray m-0 p-0 container border border-2 border-dark" disabled="disabled">
             </li>
         </ul>
+        <img class="cheeky-robot" src="src/img/carita_bubble.png" alt="pixel art robot"></img>
 
-        <div class="m-0 p-0 container-fluid btn-group-vertical position-absolute bottom-0 start-0 p-2 flex-grow-1 btn bg-success" role="group" aria-label="Basic mixed styles example">
-            <button type="submit" class="p-2 flex-grow-1 btn bg-success">UPDATE APPOINTMENT</button>
+        <div class="main-button-container">
+            <button type="submit" class='btn-create p-2 flex-grow-1 btn' type='button'>
+            🧠 Update my question! 👵🏽
+            </button>
         </div>
     </form>
 </div>

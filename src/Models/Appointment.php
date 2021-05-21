@@ -13,7 +13,7 @@ class Appointment
     private ?string $name;
     private ?string $topic;
     private ?string $date;
-    public $database;
+    public  $database;
     private $table = 'appointment';
 
     public function __construct(string $name = null, string $topic = null, $date = null, ?int $id = null)
@@ -28,7 +28,6 @@ class Appointment
             $this->database = new DbSession();
         }
     }
-
 
     public function getName()
     {
@@ -94,6 +93,7 @@ class Appointment
         $database = new DbSession();
         $query = $database->mysql->query("SELECT * FROM `appointment` ORDER BY id DESC LIMIT 1");
         $appointment = $query->fetchAll();
+
         return new self($appointment[0]["name"], $appointment[0]["topic"], $appointment[0]["date"], $appointment[0]["id"]);
     }
 }
