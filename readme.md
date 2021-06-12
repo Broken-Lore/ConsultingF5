@@ -20,7 +20,7 @@ composer init
 ```
 composer update
 ```
-## Hola
+## Hola mundo
 ## Ejecutando las pruebas ⚙️
 
 _Para poder ejecutar los test hay que correr el comando:_
